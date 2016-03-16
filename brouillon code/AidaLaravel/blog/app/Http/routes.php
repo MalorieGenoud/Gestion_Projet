@@ -11,7 +11,14 @@
 |
 */
 
+
+//Route::get('/salut/{name}', 'WelcomeController@index');
+//Route::get('a-propos', ['as' => 'about', 'uses' =>'PagesController@about']);
+
+
 Route::get('/', 'WelcomeController@index');
+
+Route::get('a-propos', ['as' => 'about', 'uses' => 'PagesController@about']);
 
 Route::get('home', 'HomeController@index');
 
