@@ -15,9 +15,7 @@ class PagesController extends Controller {
     }
 
     public function login(){
-        $title = "A propos";
-
-        return view('pages/login', compact('title', 'numbers'));
-
+        $title = "Page Projets";
+        return view('pages/home', compact('title', 'numbers'));
     }
 }

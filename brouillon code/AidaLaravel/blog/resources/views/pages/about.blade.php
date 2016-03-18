@@ -25,5 +25,5 @@
     <h3>A propos</h3>
     <p>UIAUISDFIAGBUSDFGAU SGDFUVAShidagsudfgvasuvdfva</p>
 
-    @endsection
+@endsection
     
