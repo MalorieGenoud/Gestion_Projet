@@ -3,15 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Http\Requests;
 use Validator;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
+
 class SessionController extends Controller
 {
+    use AuthenticatesUsers;
+
     /**
      * Display a listing of the resource.
      *
@@ -40,8 +43,29 @@ class SessionController extends Controller
      */
     public function store(Request $request)
     {
-        Auth::login(User::first());
-        Return redirect('/');
+        $this->validateLogin($request);
+
+        $username = $request->input('email');
+        $password = $request->input('password');
+        $user = User::where('mail', '=', $username)->first();
+
+        if($user){
+            if(Hash::check($password,$user->password)) {
+                Auth::login($user);
+                Return redirect('/');
+            }
+        }
+    }
+
+    public function validateLogin(Request $request)
+    {
+        $this->validate($request, [
+            $this->loginUsername() => 'required', 'password' => 'required',
+        ]);
+
+        //Auth::login(User::first());
+        //Return redirect('/');
+
     }
 
     /**
