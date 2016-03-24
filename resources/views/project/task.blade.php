@@ -5,10 +5,10 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Votre tâches</div>
+                    <div class="panel-heading">Vos tâches</div>
 
                     <div class="panel-body">
-                        Votre liste de tâches
+                        Les différentes tâches d'un projet
                     </div>
                 </div>
             </div>

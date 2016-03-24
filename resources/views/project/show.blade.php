@@ -8,7 +8,7 @@
                     <div class="panel-heading">Votre projet</div>
 
                     <div class="panel-body">
-                        Votre projet :
+                        Apercevez votre projet ici
                     </div>
                 </div>
             </div>

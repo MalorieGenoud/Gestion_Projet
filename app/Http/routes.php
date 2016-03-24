@@ -33,6 +33,7 @@ Route::group(['middleware' => 'web'], function () {
 
         Route::get('logout', 'SessionController@destroy');
 
+        /*
         Route::group(['prefix' => 'project'], function(){
 
             Route::get('work', function(){
@@ -52,6 +53,8 @@ Route::group(['middleware' => 'web'], function () {
             });
 
         });
+        */
+        Route::resource('project','ProjectController');
 
     });
 
