@@ -24,11 +24,11 @@ Route::group(['middleware' => 'web'], function () {
     Route::group(['middleware' => 'auth'], function(){
 
         Route::get('/', function(){
-            return view('projectslist');
+            return view('project');
         });
 
-        Route::get('/projects', function(){
-            return view('projectslist');
+        Route::get('/project', function(){
+            return view('project');
         });
 
         Route::get('logout', 'SessionController@destroy');
