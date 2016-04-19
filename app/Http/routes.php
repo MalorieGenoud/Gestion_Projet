@@ -24,7 +24,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::group(['middleware' => 'auth'], function(){
 
         Route::get('/', function(){
-            return view('projectslist');
+            return view('project');
         });
 
 

@@ -4402,3 +4402,12 @@ Stack trace:
 [2016-04-19 08:12:21] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Hash' not found' in C:\xampp\htdocs\Laravel\projet\app\Http\Controllers\ProjectController.php:24
 Stack trace:
 #0 {main}  
+[2016-04-19 08:25:40] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\xampp\htdocs\Laravel\projet\app\Http\routes.php:30
+Stack trace:
+#0 {main}  
+[2016-04-19 08:25:41] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\xampp\htdocs\Laravel\projet\app\Http\routes.php:30
+Stack trace:
+#0 {main}  
+[2016-04-19 08:25:43] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected '<<' (T_SL)' in C:\xampp\htdocs\Laravel\projet\app\Http\routes.php:30
+Stack trace:
+#0 {main}  
