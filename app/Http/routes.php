@@ -27,9 +27,6 @@ Route::group(['middleware' => 'web'], function () {
             return view('projectslist');
         });
 
-        Route::get('/projects', function(){
-            return view('projectslist');
-        });
 
         Route::get('logout', 'SessionController@destroy');
 
@@ -54,7 +51,10 @@ Route::group(['middleware' => 'web'], function () {
 
         });
         */
-        Route::resource('project','ProjectController');
+        Route::resource('project','ProjectController',['parameters' => [
+            'project' => 'id'
+        ]]);
+        Route::get('project/{id}/task', 'ProjectController@task');
 
     });
 
@@ -78,6 +78,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'Ip'], function(){
 
 
 });
+
+Route::get('/projects', function(){
+            return view('projectslist');
+        });
 
 
 Route::get('salut/{name}-{id}', ['as' => 'salut',function($name, $id){

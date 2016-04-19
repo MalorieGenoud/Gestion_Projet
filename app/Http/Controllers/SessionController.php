@@ -53,6 +53,8 @@ class SessionController extends Controller
             if(Hash::check($password,$user->password)) {
                 Auth::login($user);
                 Return redirect('/');
+            }else{
+                echo "Erreur de login";
             }
         }
     }

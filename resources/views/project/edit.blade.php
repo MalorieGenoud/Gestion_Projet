@@ -15,3 +15,8 @@
         </div>
     </div>
 @endsection
+
+<?php
+
+echo "<br>123 -> ".Hash::make('123');
+?>
