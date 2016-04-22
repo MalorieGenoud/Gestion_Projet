@@ -6,7 +6,10 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*"
+        "laravel/framework": "5.2.*",
+        "illuminate/support": ">=5.0",
+        "illuminate/view": ">=5.0",
+        "lavary/laravel-menu" : "dev-master" // Added for the menu
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -24,6 +27,9 @@
         ],
         "psr-4": {
             "App\\": "app/"
+        },
+        "psr-0":{
+            "Lavary\\Menu\\": "src/"
         }
     },
     "autoload-dev": {

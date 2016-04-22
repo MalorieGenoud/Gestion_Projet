@@ -55,7 +55,6 @@ Route::group(['middleware' => 'web'], function () {
             'project' => 'id'
         ]]);
         Route::get('project/{id}/task', 'ProjectController@task');
-
     });
 
 
