@@ -27,6 +27,14 @@ Route::group(['middleware' => 'web'], function () {
             return view('project');
         });
 
+        Route::resource('project','ProjectController',
+            ['parameters' => ['project' => 'id']],
+            ['only' => ['index']]
+        );
+
+        Route::get('project/{id}', 'ProjectController@home')->where('id', '[0-9]+');
+        Route::get('project/{id}/task', 'ProjectController@task')->where('id', '[0-9]+');
+        Route::get('project/{id}/files', 'ProjectController@files')->where('id', '[0-9]+');
 
         Route::get('logout', 'SessionController@destroy');
 
@@ -51,10 +59,7 @@ Route::group(['middleware' => 'web'], function () {
 
         });
         */
-        Route::resource('project','ProjectController',['parameters' => [
-            'project' => 'id'
-        ]]);
-        Route::get('project/{id}/task', 'ProjectController@task');
+
 
     });
 

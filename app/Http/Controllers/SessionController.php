@@ -52,7 +52,7 @@ class SessionController extends Controller
         if($user){
             if(Hash::check($password,$user->password)) {
                 Auth::login($user);
-                Return redirect('/');
+                return redirect()->route('project.index');
             }else{
                 echo "Erreur de login";
             }

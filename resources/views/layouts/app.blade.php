@@ -48,7 +48,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
 
-                    <li><a href="{{ url('/projects') }}">Tout les projets</a></li>
+                    <li><a href="{{ url('/project') }}">Tout les projets</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
