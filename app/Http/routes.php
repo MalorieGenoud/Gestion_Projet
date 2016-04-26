@@ -32,7 +32,7 @@ Route::group(['middleware' => 'web'], function () {
             ['only' => ['index']]
         );
 
-        Route::get('project/{id}', 'ProjectController@home')->where('id', '[0-9]+');
+        Route::get('project/{id}', 'ProjectController@show')->where('id', '[0-9]+');
         Route::get('project/{id}/task', 'ProjectController@task')->where('id', '[0-9]+');
         Route::get('project/{id}/files', 'ProjectController@files')->where('id', '[0-9]+');
 

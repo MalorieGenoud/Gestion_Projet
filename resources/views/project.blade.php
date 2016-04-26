@@ -10,6 +10,17 @@
                     <div class="panel-body">
                         Vous êtes loggé ! Voilà vos projets !
                     </div>
+
+
+                    @foreach($projects as $project)
+                        <div>
+                        <h3><a href="{{route('project.index')}}/{{ $project->id }}">{{ $project->name }}</a></h3>
+                        @foreach($project->users as $user)
+                           <p>Utilisateurs :  {{ $user->lastname }} {{ $user->firstname }}</p>
+                        @endforeach
+                        </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>

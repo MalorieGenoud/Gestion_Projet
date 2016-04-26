@@ -47,13 +47,12 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <!-- Authentication Links -->
-                @if (Auth::guest())
-
+                @if (!Auth::user())
 
                 @else
                     <ul class="nav navbar-nav">
 
-                    <li><a href="{{ url('/') }}">Tout les projets</a></li>
+                    <li><a href="{{ url('/project') }}">Tout mes projets</a></li>
                     <li><a href="{{ url('/project/show') }}">Le projet</a></li>
                     <li><a href="{{ url('/project/edit') }}">Modifier le projet</a></li>
                 </ul>
