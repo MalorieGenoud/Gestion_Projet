@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
-@section('planning')
+@section('create')
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Le planning initial</div>
+                    <div class="panel-heading">Création de projet</div>
 
                     <div class="panel-body">
-                        Votre planning initial
+                        Créez votre projet ici
                     </div>
                 </div>
             </div>

@@ -12,6 +12,22 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-10 col-md-offset-1">
+                <h1>Planning</h1>
+                @yield('planning')
+            </div>
+
+            <div class="col-md-10 col-md-offset-1">
+                @yield('tasks')
+            </div>
+
+            <div class="col-md-6 col-md-offset-1">
+                @yield('infos')
+            </div>
+
+            <div class="col-md-6 col-md-offset-1">
+                @yield('files')
+            </div>
         </div>
     </div>
 @endsection

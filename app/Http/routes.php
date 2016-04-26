@@ -28,7 +28,7 @@ Route::group(['middleware' => 'web'], function () {
         });
 
         Route::resource('project','ProjectController',
-            ['parameters' => ['project' => 'id']],
+            ['parameters' => ['project' => 'id']], 
             ['only' => ['index']]
         );
 
